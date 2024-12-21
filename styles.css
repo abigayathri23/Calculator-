@@ -1,0 +1,112 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: #000;
+  }
+  
+  /* Background Animation */
+  .background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #8fd3f4, #84fab0, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientMove 10s infinite ease-in-out;
+    z-index: -1;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Calculator Styling */
+  .calculator {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  #display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    border: none;
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button Grid */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .operator {
+    background: #ff6b6b;
+    color: white;
+  }
+  
+  .operator:hover {
+    background: #ff3b3b;
+  }
+  
+  button:nth-child(odd), button:nth-child(even) {
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #8fd3f4, #84fab0, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientMove 10s infinite ease-in-out;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Background Gradient Animation (already defined in the body) */
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
